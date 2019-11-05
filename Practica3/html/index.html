@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="../js/validarFormulario.js"></script>
+    </head>
+    <body style="text-align: center;background-color: beige">
+        <h1>Añadir un comentario.</h1>
+        <div style="background-color:">
+            <form id="fcoment" onsubmit="return validarForm()" method="GET">
+                <div>
+                    <label>Introduce tu nombre de usuario: * </label><br>
+                    <input type="text" name="user" placeholder="Usuario">
+                </div>
+                <div>
+                    <label>Introduce tu nombre de usuario: * </label><br>
+                    <input type="text" name="user" placeholder="Usuario">
+                </div>
+                <div>
+                    <label>Introduce tu direccion de correo electronico:</label><br>
+                    <input type="text" name="email" size="50" placeholder="alguien@example.com"><br>
+                    <input type="checkbox" name="email-public"><label>Deseo hacer publica mi direccion de correo electronico.</label>
+                </div>
+                <div>
+                    <label>Introduce tu comentario: *</label><br>
+                    <textarea name="coment" rows="10" cols="50" placeholder="Introduce aqui tu comentario."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-danger">Enviar</button>
+            </form>
+        </div>
+    
+    </body>
+
+</html>
