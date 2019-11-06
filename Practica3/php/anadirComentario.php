@@ -21,8 +21,12 @@
                     <label>Introduce tu comentario: *</label><br>
                     <textarea name="coment" rows="10" cols="50" placeholder="Introduce aqui tu comentario."></textarea>
                 </div>
-                
-                <button type="submit" class="btn btn-danger">Enviar</button>
+                <div>
+                    <button type="submit" class="btn btn-danger">Enviar</button>
+                </div>
+                <div>
+                    <a href="javascript:history.back()">Haz click aqui para volver a la pagina inicial.</a>
+                </div>
             </form>
         </div>
     
@@ -32,20 +36,14 @@
         <?php
             if(isset($_REQUEST['user'])){
                 if(!file_exists('../xml/visitas.xml')){
-                    $archivo = fopen("../xml/visitas.xml","wr") or die("No se ha podido crear el archivo");
-                    $text = <<<_END
-                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                    <!DOCTYPE visitas SYSTEM "../xml/libro_visitas.dtd">
-                    <visitas ult_id="0">
-                    </visitas>
-                    _END;
+                    $archivo = fopen('../xml/visitas.xml','w') or die("No se ha podido crear el archivo");
+                    $text = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<!DOCTYPE visitas SYSTEM \"../xml/libro_visitas.dtd\">\n<visitas ult_id=\"0\">\n</visitas>";
+
                     fwrite($archivo,$text) or die("No se ha podido escribir el archivo.");
                     fclose($archivo);
                 }
-                
-                $xml = simplexml_load_file('../xml/visitas.xml');
+                 $xml = simplexml_load_file('../xml/visitas.xml');
                 //añadir archivos al xml
-                $xml->asXML('../xml/visitas.xml');
                 $id = (int)$xml['ult_id'];
                 //Actualizo la id
                 $id=$id+1;
@@ -59,7 +57,7 @@
                 $visita->addChild("nombre",$_REQUEST['user']);
                 $visita->addChild("comentario",$_REQUEST['coment']);
                 
-                $email = $visita->addChild("email");
+                $email = $visita->addChild("email",$_REQUEST['email']);
                 if(isset($_REQUEST['email-public'])){
                     $email->addAttribute("mostrar","si");
                 }else{
@@ -67,8 +65,11 @@
                 }
                 
                 $xml->asXML('../xml/visitas.xml');
+                echo "<script>
+                    alert('Comentario añadido correctamente, pulsa aceptar para ver todos los comentarios.');
+                    window.location.href='verComentarios.php';
+                </script>";
             }
         ?>
     </div>
-
 </html>

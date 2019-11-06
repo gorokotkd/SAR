@@ -17,9 +17,6 @@ function validarForm(){
             }
         }
     }
-    if(resul){
-        alert("Datos enviados correctamente.");
-    }
     return resul;
 }
 

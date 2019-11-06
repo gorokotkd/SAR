@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE visitas SYSTEM "../xml/libro_visitas.dtd">
 <visitas ult_id="1">
-<visita id="1"><fecha>Tuesday 5th of November 2019 05:50:57 PM</fecha><nombre>gorokotkd</nombre><comentario>Hola</comentario><email mostrar="si"/></visita></visitas>
+<visita id="1"><fecha>Wednesday 6th of November 2019 04:11:14 PM</fecha><nombre>Gorka</nombre><comentario>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tortor odio, fermentum vel leo id, semper volutpat nisi. Praesent lorem tortor, volutpat et ex id, vehicula condimentum nunc. Pellentesque commodo semper est quis convallis. Aliquam tincidunt ac nibh eget imperdiet. Donec eleifend hendrerit ante, vitae porttitor nulla tincidunt a. Donec sollicitudin vitae sapien at eleifend. Integer congue aliquam tortor, vel imperdiet justo sodales a. Suspendisse consequat lacinia ipsum, non auctor nisi vehicula eget.</comentario><email mostrar="si">g_alvarezm@hotmail.com</email></visita></visitas>
