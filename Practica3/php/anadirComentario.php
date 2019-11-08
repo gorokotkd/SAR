@@ -3,11 +3,12 @@
     <head>
         <meta charset="utf-8">
         <script src="../js/validarFormulario.js"></script>
+        <title>Libro de visitas</title>
     </head>
     <body style="text-align: center;background-color: beige">
         <h1>Añadir un comentario.</h1>
-        <div style="background-color:">
-            <form id="fcoment" onsubmit="return validarForm()" action="anadirComentario.php" method="GET">
+        <div>
+            <form id="fcoment" onsubmit="return validarForm()" action="anadirComentario.php" method="POST">
                 <div>
                     <label>Introduce tu nombre de usuario: * </label><br>
                     <input type="text" name="user" placeholder="Usuario">
@@ -57,11 +58,14 @@
                 $visita->addChild("nombre",$_REQUEST['user']);
                 $visita->addChild("comentario",$_REQUEST['coment']);
                 
-                $email = $visita->addChild("email",$_REQUEST['email']);
-                if(isset($_REQUEST['email-public'])){
-                    $email->addAttribute("mostrar","si");
-                }else{
-                     $email->addAttribute("mostrar","no");
+                if(isset($_REQUEST['email'])){
+                    
+                    $email = $visita->addChild("email",$_REQUEST['email']);
+                    if(isset($_REQUEST['email-public'])){
+                        $email->addAttribute("mostrar","si");
+                    }else{
+                         $email->addAttribute("mostrar","no");
+                    }
                 }
                 
                 $xml->asXML('../xml/visitas.xml');
