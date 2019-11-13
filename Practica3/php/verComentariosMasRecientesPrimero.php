@@ -9,7 +9,9 @@
             $MAX_STR_SIZE = 15;
             if(file_exists("../xml/visitas.xml")){
                     $xml = simplexml_load_file("../xml/visitas.xml");
-                    foreach($xml->xpath("//visita") as $visita){
+                    $tamano = $xml['ult_id']-1;
+                    while($tamano>=0){
+                        $visita = $xml->visita[$tamano];    
                         echo"<p><table border=1>";
                             echo"<tr bgcolor = \"#9acd32\">";
                             if(isset($visita->email)){
@@ -60,7 +62,7 @@
                                                     
 
                         echo"</table></p>";
-                        
+                        $tamano--;
                     }
                     echo"<p ><a href=\"../html/index.html\">Volver al menu principal</a></p>";
                 }                      
