@@ -1,0 +1,15 @@
+<imagenes>
+    <imagen id="">
+        <datos>
+            <propietario></propietario>
+            <fecha></fecha>
+        </datos>
+        <comentarios>
+            <comentario>
+                <usuario></usuario>
+                <fecha></fecha>
+                <comentario></comentario>
+            </comentario>
+        </comentarios>
+    </imagen>
+</imagenes>
