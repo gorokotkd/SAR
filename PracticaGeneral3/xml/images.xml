@@ -1,15 +1,9 @@
-<imagenes>
-    <imagen id="">
+<imagenes ult_id="001">
+    <imagen id="001">
         <datos>
-            <propietario></propietario>
-            <fecha></fecha>
+            <propietario>gorokotkd</propietario>
+            <fecha>19-11-2019</fecha>
+            <categoria>Paisajes</categoria>
         </datos>
-        <comentarios>
-            <comentario>
-                <usuario></usuario>
-                <fecha></fecha>
-                <comentario></comentario>
-            </comentario>
-        </comentarios>
     </imagen>
 </imagenes>

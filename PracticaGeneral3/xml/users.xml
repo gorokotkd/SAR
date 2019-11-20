@@ -4,5 +4,8 @@
         <nombre></nombre>
         <apellidos></apellidos>
         <pass></pass>
+        <imagenes>
+            <values></values>
+        </imagenes>
     </user>
 </users>
