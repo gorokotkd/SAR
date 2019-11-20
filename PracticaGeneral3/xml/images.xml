@@ -1,9 +1,19 @@
-<imagenes ult_id="001">
-    <imagen id="001">
+<?xml version="1.0"?>
+<imagenes ult_id="2">
+    <imagen id="1">
         <datos>
-            <propietario>gorokotkd</propietario>
+            <propietario>galvarez024@ikasle.ehu.eus</propietario>
             <fecha>19-11-2019</fecha>
             <categoria>Paisajes</categoria>
         </datos>
+        <path>img_001.jpg</path>
+    </imagen>
+    <imagen id="2">
+        <datos>
+            <propietario>galvarez024@ikasle.ehu.eus</propietario>
+            <fecha>20.11.19</fecha>
+            <categoria>paisaje</categoria>
+        </datos>
+        <path>img_2.jpg</path>
     </imagen>
 </imagenes>
