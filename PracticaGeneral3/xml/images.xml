@@ -1,19 +1,11 @@
 <?xml version="1.0"?>
-<imagenes ult_id="2">
+<imagenes ult_id="5">
     <imagen id="1">
         <datos>
             <propietario>galvarez024@ikasle.ehu.eus</propietario>
             <fecha>19-11-2019</fecha>
-            <categoria>Paisajes</categoria>
-        </datos>
-        <path>img_001.jpg</path>
-    </imagen>
-    <imagen id="2">
-        <datos>
-            <propietario>galvarez024@ikasle.ehu.eus</propietario>
-            <fecha>20.11.19</fecha>
             <categoria>paisaje</categoria>
         </datos>
-        <path>img_2.jpg</path>
+        <path>img_1.jpg</path>
     </imagen>
-</imagenes>
+<imagen id="2"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>27.11.19</fecha><categoria>deporte</categoria></datos><path>img_2.jpg</path></imagen><imagen id="3"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>27.11.19</fecha><categoria>deporte</categoria></datos><path>img_3.jpg</path></imagen><imagen id="4"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>27.11.19</fecha><categoria>animal</categoria></datos><path>img_4.jpg</path></imagen><imagen id="5"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>27.11.19</fecha><categoria>paisaje</categoria></datos><path>img_5.jpg</path></imagen></imagenes>

@@ -1,11 +1,11 @@
+<?xml version="1.0"?>
 <users>
-    <user id="">
-        <email></email>
-        <nombre></nombre>
-        <apellidos></apellidos>
-        <pass></pass>
+    <user email="">
+        <nombre/>
+        <apellidos/>
+        <pass/>
         <imagenes>
-            <values></values>
+            <values/>
         </imagenes>
     </user>
-</users>
+<user email="galvarez024@ikasle.ehu.eus"><nombre>Gorka</nombre><apellidos>Alvarez</apellidos><pass>123456</pass></user></users>
