@@ -1,39 +1,26 @@
-<?php
-    if (isset($_POST['emailL'])){
-        $emailL = $_REQUEST['emailL'];
-        $pass = $_REQUEST['passL'];
-        $xml = simplexml_load_file('../xml/users.xml');
-        $existe = false;
-        foreach ($xml->xpath('user') as $user){
-            if($user->attributes()->email == $emailL && $user->pass == $pass){
-                $existe = true;
-            }
-        }
-        $xml->asXML('../xml/users.xml');
-        if(!isset($_SESSION["email"])){
-             session_start();
-             if($existe){
-                 $_SESSION["email"] = $emailL;
-            } 
-        }
-    }
-?>
+<?php session_start();?>
 <html>
     <head>
         <?php include'../html/Head.html'?>
     </head>
     <body>
         <?php include'../php/Menus.php'?>
-        <section id="s1" class="main">
-            <div>
-                <form method = "post" action = "LogIn.php">
-                    <h3>Email</h3>
-                    <input id = "emailL" name = "emailL">
+        <section id="s1" role="main" class="container">
+            <div class="starter-template">
+                <form method="post" action="LogIn.php">
+                        <div class="form-group">
+                            <label for="emailL">Email address</label>
+                            <input id="emailL" type="email" class="form-control" aria-describedby="emailHelp" name="emailL">
+                        </div>
                     
-                    <h3>Contraseña</h3>
-                    <input type = "password" id = "passL" name = "passL">
-                
-                    <br><input type = "submit" value = "Iniciar sesion">
+                        <div class="form-group">
+                            <label for="passL">Password</label>
+                            <input type="password" class="form-control" id="passL" name="passL">
+                        </div>
+                        <div class="alert alert-danger"  style="display:none"role="alert" id="alert-error">
+                            El email o contraseña es incorrecto
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
                 <?php
                     if(isset($_REQUEST['emailL'])){
@@ -48,12 +35,15 @@
                         }
                         $xml->asXML('../xml/users.xml');
                         if($existe){
+                            $_SESSION['email'] = $email;
                             echo "<script>
                                     alert('Bienvenido al sistema: $email');
                                     window.location.href='Layout.php';
                                     </script>";
                         }else{
-                            echo "Datos de inicio de sesion incorrectos.";
+                            echo "<script>
+                            document.getElementById('alert-error').style.display=\"\";
+                        </script>";
                         }                     
                     }
                 ?>
