@@ -61,7 +61,7 @@
 
                         $datos = $imagen->addChild('datos');
                         $datos->addChild('propietario',$_REQUEST['email']);
-                        $datos->addChild('fecha',date("d.m.y"));
+                        $datos->addChild('fecha',date("y-m-d"));
                         $datos->addChild('categoria',$_REQUEST['categoria']);
 
 

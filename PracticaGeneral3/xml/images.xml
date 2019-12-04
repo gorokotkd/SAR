@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<imagenes ult_id="7">
+<imagenes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="imagesSchema.xsd" ult_id="1">
     <imagen id="1">
         <datos>
             <propietario>galvarez024@ikasle.ehu.eus</propietario>
-            <fecha>19-11-2019</fecha>
+            <fecha>1999-05-31</fecha>
             <categoria>paisaje</categoria>
         </datos>
         <path>img_1.jpg</path>
     </imagen>
-<imagen id="2"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>27.11.19</fecha><categoria>deporte</categoria></datos><path>img_2.jpg</path></imagen><imagen id="3"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>27.11.19</fecha><categoria>deporte</categoria></datos><path>img_3.jpg</path></imagen><imagen id="4"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>27.11.19</fecha><categoria>animal</categoria></datos><path>img_4.jpg</path></imagen><imagen id="5"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>27.11.19</fecha><categoria>paisaje</categoria></datos><path>img_5.jpg</path></imagen><imagen id="6"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>03.12.19</fecha><categoria>paisaje</categoria></datos><path>img_6.jpg</path></imagen><imagen id="7"><datos><propietario>galvarez024@ikasle.ehu.eus</propietario><fecha>03.12.19</fecha><categoria>otra</categoria></datos><path>img_7.jpg</path></imagen></imagenes>
+</imagenes>
