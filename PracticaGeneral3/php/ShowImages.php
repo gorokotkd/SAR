@@ -7,7 +7,6 @@
     <body>
         <?php include'../php/Menus.php'?>
         <section id="s1" role="main" class="container">
-                <form>
                     <h3>Selecciona el tipo de imagenes que quieres ver:</h3>
                     <div class="form-group">
                         <select id="tipos" name="tipos" class="custom-select">
@@ -23,7 +22,6 @@
                         <button type="submit" class="btn btn-primary" onclick="mostrarTabla()">Mostrar Imagenes</button>
                     </div>
                     <div id="tabla-images"></div>
-                    </form>
         </section>
     </body>
 </html>

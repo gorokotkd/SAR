@@ -6,14 +6,17 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="../php/Layout.php">Inicio</a>
-      </li>
-      <li class="nav-item">
+        <li class="nav-item active">
+            <a class="nav-link" href="../php/Layout.php">Inicio</a>
+        </li>
+        <li class="nav-item">
           <span id="add-images" style="display:none;"><a class="nav-link" href="../php/AddImage.php">Añadir Imagenes</a></span>
-      </li>
-      <li class="nav-item">
-        <span id="show-images" style="display:none;"><a class="nav-link" href="../php/ShowImages.php">Ver Imagenes</a></span>
+        </li>
+        <li class="nav-item">
+            <span id="show-images" style="display:none;"><a class="nav-link" href="../php/ShowImages.php">Ver Imagenes</a></span>
+        </li>
+        <li class="nav-item">
+        <span id="show-my-images" style="display:none;"><a class="nav-link" href="../php/ShowMyImages.php">Mis Imagenes</a></span>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-1">
@@ -22,11 +25,15 @@
                 <span id="login"><a class="nav-link" href="../php/LogIn.php">Log In</a></span>
             </li>
             <li class="nav-item">
-                <span id="register"><a class="nav-link" href="../php/SignUp.php">Register</a></span>
+                <span id="register" style="display:none"><a class="nav-link" href="../php/SignUp.php">Registrarse</a></span>
+            </li>
+            <li class="nav-item">
+                <span id="user" style="display:none"><a class="nav-link" id="user2" href="#"></a></span>
             </li>
             <li class="nav-item">
                 <span id="logout" style="display:none;"> <a class="nav-link" href="../php/LogOut.php">Log Out</a></span>
             </li>
+            
         </ul>
     </form>
   </div>
@@ -37,10 +44,13 @@
         echo "<script>
             document.getElementById('login').style.display=\"none\";
             document.getElementById('register').style.display=\"none\";
+            document.getElementById('user').style.display=\"\";
+            document.getElementById('user2').innerHTML=\"{$_SESSION['email']}\";
             document.getElementById('logout').style.display=\"\";
             
             document.getElementById('add-images').style.display=\"\";
             document.getElementById('show-images').style.display=\"\";
+            document.getElementById('show-my-images').style.display=\"\";
         </script>";
     }else{
         echo "<script>
@@ -50,6 +60,7 @@
             
             document.getElementById('add-images').style.display=\"none\";
             document.getElementById('show-images').style.display=\"none\";
+            document.getElementById('show-my-images').style.display=\"none\";
         </script>";
     }
 ?>
