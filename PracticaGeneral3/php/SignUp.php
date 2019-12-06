@@ -1,4 +1,5 @@
-      <html>
+<!DOCTYPE HTML>
+<html>
     <head>
         <?php include'../html/Head.html'?>
     </head>
@@ -14,10 +15,10 @@
                             El email debe tener el formato de la UPV/EHU, ya sea de alumnos o profesores. Ej: galvarez024@ikasle.ehu.eus o gorka@ehu.eus
                         </small>
                     </div>
-                    <div class="alert alert-danger"  style="display:none"role="alert" id="alert-email">
+                    <div class="alert alert-danger"  style="display:none" role="alert" id="alert-email">
                         El email no es del formato de la UPV/EHU!
                     </div>
-                    <div class="alert alert-danger"  style="display:none"role="alert" id="alert-email-repeat">
+                    <div class="alert alert-danger"  style="display:none" role="alert" id="alert-email-repeat">
                         Este email ya esta registrado!
                     </div>
                     <div class="form-row">

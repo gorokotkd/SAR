@@ -1,4 +1,5 @@
 <?php include'Seguridad.php' ?>
+<!DOCTYPE HTML>
 <html>
     <head>
         <?php include '../html/Head.html';?>
@@ -37,10 +38,10 @@
                     <button type="reset" class="btn btn-secondary" onclick="limpiar()">Reset Form</button>
                    
                 </form>
-                <div class="alert alert-danger"  style="display:none"role="alert" id="alert-error">
+                <div class="alert alert-danger"  style="display:none" role="alert" id="alert-error">
                             Ha habido un error al insertar tu imagen!
                 </div>
-                    <div class="alert alert-success"  style="display:none"role="alert" id="alert-ok">
+                    <div class="alert alert-success"  style="display:none" role="alert" id="alert-ok">
                             Tu imagen se ha insertado correctamente!
                     </div>
                 
