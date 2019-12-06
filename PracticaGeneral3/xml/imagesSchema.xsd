@@ -3,9 +3,7 @@
     <xs:element name='imagenes'>
         <xs:complexType>
             <xs:sequence>
-                
-                <xs:element name='imagen'>
-                    
+                <xs:element name='imagen'>       
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name='datos'>
@@ -27,3 +25,4 @@
         </xs:complexType>
     </xs:element>
 </xs:schema>		
+

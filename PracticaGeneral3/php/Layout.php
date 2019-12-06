@@ -7,7 +7,7 @@
         <?php include'../php/Menus.php'?>
         <section id="s1" role="main" class="container">
             <div class="starter-template">
-                
+                <img src="../images/img_principal.jpg" width="50%" height="50%"/>
             </div>
         </section>
     </body>
