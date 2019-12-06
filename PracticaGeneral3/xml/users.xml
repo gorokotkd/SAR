@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="usersSchema.xsd">
-    <user email="galvarez024@ikasle.ehu.eus">
-        <nombre>Gorka</nombre>
-        <apellidos>Alvarez</apellidos>
-        <pass>123456</pass>
-    </user>
-</users>

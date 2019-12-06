@@ -67,6 +67,14 @@
                     document.getElementById('alert-pass').style.display=\"\";
                 </script>";
             }else{
+                if(!file_exists('../xml/images.xml')){
+                    $archivo = fopen('../xml/users.xml','w') or die("No se ha podido crear el archivo");
+                    $text = "<?xml version=\"1.0\"?><users xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"usersSchema.xsd\">\n</users>";
+
+                    fwrite($archivo,$text) or die("No se ha podido escribir el archivo.");
+                    fclose($archivo);
+                }
+                
                 $repetido = false;
                 $xml = simplexml_load_file('../xml/users.xml');
                 foreach ($xml->xpath('user') as $user){

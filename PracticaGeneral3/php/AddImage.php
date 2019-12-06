@@ -54,6 +54,13 @@
                 EN ESTA PARTE QUEDARIA AÑADIR LA IMAGEN AÑADIDA AL XML DE USUARIOS
                 */
                     if(isset($_REQUEST['email'])){
+                        if(!file_exists('../xml/images.xml')){
+                            $archivo = fopen('../xml/images.xml','w') or die("No se ha podido crear el archivo");
+                            $text = "<?xml version=\"1.0\"?><imagenes xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"imagesSchema.xsd\" ult_id=\"0\">\n</imagenes>";
+
+                            fwrite($archivo,$text) or die("No se ha podido escribir el archivo.");
+                            fclose($archivo);
+                        }
                         $xml = simplexml_load_file('../xml/images.xml');
                         $xml['ult_id']  += 1;
                         $imagen = $xml->addChild('imagen');
