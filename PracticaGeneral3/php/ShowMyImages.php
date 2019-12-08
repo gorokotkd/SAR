@@ -16,7 +16,7 @@
 
                     foreach($xml->imagen as $imagen){
                         if($_SESSION['email']==$imagen->datos->propietario){
-                            echo"<tr><td>".$imagen->datos->propietario."</td><td>".$imagen->datos->fecha."</td><td>".$imagen->datos->categoria."</td><td><img src=\"../images/".$imagen->path."\" width=\"150\" height=\"150\"></td></tr>";
+                            echo"<tr><td>".$imagen->datos->propietario."</td><td>".$imagen->datos->fecha."</td><td>".$imagen->datos->categoria."</td><td><img alt=\"Imagen\" src=\"../images/".$imagen->path."\" width=\"150\" height=\"150\"></td></tr>";
                         }
                     }
                     echo"</table>";

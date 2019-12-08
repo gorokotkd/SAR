@@ -11,7 +11,7 @@
                 <form method="post" action="LogIn.php">
                         <div class="form-group">
                             <label for="emailL">Email address</label>
-                            <input id="emailL" type="email" class="form-control" aria-describedby="emailHelp" name="emailL">
+                            <input id="emailL" type="email" class="form-control" name="emailL">
                         </div>
                     
                         <div class="form-group">

@@ -17,8 +17,8 @@
                     <div class="form-group">
                         <label for="email">Selecciona la categoria de la imagen</label>
                        <select id="categoria" name="categoria" class="custom-select">
-                            <option value="paisaje">Paisajes</option><
-                            option value="ciudad">Ciudades</option>
+                            <option value="paisaje">Paisajes</option>
+                            <option value="ciudad">Ciudades</option>
                             <option value="deporte">Deportes</option>
                             <option value="animal">Animales</option>
                             <option value="comida">Comida</option>
@@ -27,8 +27,8 @@
                     </div>
                     <div class="form-group">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="file" requiered name="file" onchange="verImagen(this)" accept="image/*">
-                            <label class="custom-file-label" for="customFileLang">Seleccionar imagen</label>
+                            <input type="file" class="custom-file-input" id="file" required name="file" accept="image/*">
+                            <label class="custom-file-label" for="file">Seleccionar imagen</label>
                         </div>
                         <div class="form-group" id="div-vacio"></div>
                         <div id="img-muestra">
@@ -49,49 +49,47 @@
             </div>
         </section>
     </body>
-        <div>
-             <?php
-                /*
-                EN ESTA PARTE QUEDARIA AÑADIR LA IMAGEN AÑADIDA AL XML DE USUARIOS
-                */
-                    if(isset($_REQUEST['email'])){
-                        if(!file_exists('../xml/images.xml')){
-                            $archivo = fopen('../xml/images.xml','w') or die("No se ha podido crear el archivo");
-                            $text = "<?xml version=\"1.0\"?><imagenes xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"imagesSchema.xsd\" ult_id=\"0\">\n</imagenes>";
+     <?php
+        /*
+        EN ESTA PARTE QUEDARIA AÑADIR LA IMAGEN AÑADIDA AL XML DE USUARIOS
+        */
+            if(isset($_REQUEST['email'])){
+                if(!file_exists('../xml/images.xml')){
+                    $archivo = fopen('../xml/images.xml','w') or die("No se ha podido crear el archivo");
+                    $text = "<?xml version=\"1.0\"?><imagenes xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"imagesSchema.xsd\" ult_id=\"0\">\n</imagenes>";
 
-                            fwrite($archivo,$text) or die("No se ha podido escribir el archivo.");
-                            fclose($archivo);
-                        }
-                        $xml = simplexml_load_file('../xml/images.xml');
-                        $xml['ult_id']  += 1;
-                        $imagen = $xml->addChild('imagen');
-                        $imagen->addAttribute('id',$xml['ult_id']);
+                    fwrite($archivo,$text) or die("No se ha podido escribir el archivo.");
+                    fclose($archivo);
+                }
+                $xml = simplexml_load_file('../xml/images.xml');
+                $xml['ult_id']  += 1;
+                $imagen = $xml->addChild('imagen');
+                $imagen->addAttribute('id',$xml['ult_id']);
 
-                        $datos = $imagen->addChild('datos');
-                        $datos->addChild('propietario',$_REQUEST['email']);
-                        $datos->addChild('fecha',date("y-m-d"));
-                        $datos->addChild('categoria',$_REQUEST['categoria']);
+                $datos = $imagen->addChild('datos');
+                $datos->addChild('propietario',$_REQUEST['email']);
+                $datos->addChild('fecha',date("y-m-d"));
+                $datos->addChild('categoria',$_REQUEST['categoria']);
 
 
-                        $imagePath = "../images/";
-                        $imagename = "img_".$xml['ult_id'].".jpg";
-                        $imagetemp = $_FILES['file']['tmp_name'];
+                $imagePath = "../images/";
+                $imagename = "img_".$xml['ult_id'].".jpg";
+                $imagetemp = $_FILES['file']['tmp_name'];
 
-                        if(!move_uploaded_file($imagetemp,$imagePath.$imagename)){
-                            echo "<script>
-                            document.getElementById('alert-error').style.display=\"\";
-                            </script>";
-                            exit();
-                        }
+                if(!move_uploaded_file($imagetemp,$imagePath.$imagename)){
+                    echo "<script>
+                    document.getElementById('alert-error').style.display=\"\";
+                    </script>";
+                    exit();
+                }
 
-                        $imagen->addChild('path',$imagename);
-                        $xml->asXML('../xml/images.xml');
-                         echo "<script>
-                            document.getElementById('alert-ok').style.display=\"\";
-                        </script>";
-                    }
+                $imagen->addChild('path',$imagename);
+                $xml->asXML('../xml/images.xml');
+                 echo "<script>
+                    document.getElementById('alert-ok').style.display=\"\";
+                </script>";
+            }
 
-                ?>
+        ?>
 
-            </div>
 </html>
